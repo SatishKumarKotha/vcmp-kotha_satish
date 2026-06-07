@@ -1,0 +1,1148 @@
+{
+	"info": {
+		"_postman_id": "bf67e910-d605-48e0-9197-1ddb4ea5ee85",
+		"name": "Finversco_Vendor_Contract_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33705159"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "refreshToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDIxMTIwMiwiZXhwIjoxNzgwMjEyMTAyfQ.Z0rPK4dKhIB5yHjOETEkn6shyuZbFdfEQSfT5CKxtY8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJGSU5BTkNFIiwiaWF0IjoxNzgwMjA5ODUxLCJleHAiOjE3ODAyMTA3NTF9.PkG2ka7HR0kpAdHycNuGJ1qNoq2zbeatYzVkfaA5tFQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc4MDIxMzcwOCwiZXhwIjoxNzgwODE4NTA4fQ.HQazOUayIjp8lUPYj920Mnopl5Wgc3D_jkOfo74crJc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDIxMzcwOCwiZXhwIjoxNzgwMjE0NjA4fQ.a4IREJdjWtO_RXmONzPFhG-HRQJjxX0hGQ8OwVyBq10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJGSU5BTkNFIiwiaWF0IjoxNzgwMjA5ODUxLCJleHAiOjE3ODAyMTA3NTF9.PkG2ka7HR0kpAdHycNuGJ1qNoq2zbeatYzVkfaA5tFQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chnagePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDIxMzcwOCwiZXhwIjoxNzgwMjE0NjA4fQ.a4IREJdjWtO_RXmONzPFhG-HRQJjxX0hGQ8OwVyBq10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJGSU5BTkNFIiwiaWF0IjoxNzgwMjA5ODUxLCJleHAiOjE3ODAyMTA3NTF9.PkG2ka7HR0kpAdHycNuGJ1qNoq2zbeatYzVkfaA5tFQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"oldPassword\": \"Admin@123\",\n  \"newPassword\": \"Admin@456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJGSU5BTkNFIiwiaWF0IjoxNzgwMjA5ODUxLCJleHAiOjE3ODAyMTA3NTF9.PkG2ka7HR0kpAdHycNuGJ1qNoq2zbeatYzVkfaA5tFQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"Admin@finvesco.com\",\n  \"password\": \"Password@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDQxNjQ1MiwiZXhwIjoxNzgwNDE3MzUyfQ.Js06xNiK3hhHer4acS9bdXD5GKctZ0H0ulxqrMfABjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users?page=1&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n            \"id\": 3,\n            \"name\": \"Finance\",\n            \"email\": \"finance@finvesco.com\",\n            \"role\": \"FINANCE\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuserByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDU0MTY2MywiZXhwIjoxNzgwNTQyNTYzfQ.eeqgz-8_-zz4bAWO1dPTDQdwr1rk5pJPmK-jp-tzi7Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDU2OTYxNSwiZXhwIjoxNzgwNTcwNTE1fQ.fhUCqSwzc7dLL_VS4qe5JbSR9dCEzYRxrW4ZUWJbkuQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Finance\",\n     \"status\": \"active\",\n     \"role\": \"FINANCE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDU0MTY2MywiZXhwIjoxNzgwNTQyNTYzfQ.eeqgz-8_-zz4bAWO1dPTDQdwr1rk5pJPmK-jp-tzi7Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Finance\",\n     \"status\": \"active\",\n     \"role\": \"FINANCE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contract",
+			"item": [
+				{
+					"name": "create_contract",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgxMTM2NiwiZXhwIjoxNzgwODEyMjY2fQ.4ZGnyUudLkqL49zg8n7VMJk5PeqYNs5nwxhp62dSGTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor_id\": 2,\n  \"title\": \"DigitAPp Agreement\",\n  \"value\": 300000,\n  \"currency\": \"INR\",\n  \"start_date\": \"2026-06-01\",\n  \"end_date\": \"2027-05-31\",\n  \"document_url\": \"https://finversco.com/contracts/if_support.pdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/contracts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contracts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getContracts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgxMjM0OCwiZXhwIjoxNzgwODEzMjQ4fQ.dyKtaS_pfhqkf9I8a8TytBYg1pQnzn699ZsqUMmFHLE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/contract",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getContractByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgxMzc1NSwiZXhwIjoxNzgwODE0NjU1fQ.blFyLN9CmE3_pJnzkof8TBg5smDF6dfWnSaAceBUUds",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/contracts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contracts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "getVendors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgwNzQ3OSwiZXhwIjoxNzgwODA4Mzc5fQ.fZcwco6yMoR_dwk4FyvxC-Di-bjrs6b1FgS6FchRUtY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vendors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createVendor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDU3MDczMSwiZXhwIjoxNzgwNTcxNjMxfQ.5bhOv8kRmORby5qvMXA7s_YGMjHVro7X9VTW7gYNDvE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"company_name\":\"Infra Pvt Ltd\",\n  \"contact_person\":\"Ramesh\",\n  \"email\":\"infra@gmail.com\",\n  \"phone\":\"9876543210\",\n  \"gstin\":\"22AAER3Z5\",\n  \"address\":\"Hyderabad\",\n  \"category\":\"IT Services\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vendor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVendorByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgwNjIzNCwiZXhwIjoxNzgwODA3MTM0fQ.iTjsfDX-LPFLFjOU8Eb1JSSOtBGNwRRM-lj6VWsArtI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vendors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateVendor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"company_name\":\"ITInfra Pvt Ltd\",\n  \"contact_person\":\"Ramesh\",\n  \"email\":\"infra@gmail.com\",\n  \"phone\":\"9876545210\",\n  \"gstin\":\"22AAER3Z@#5\",\n  \"address\":\"Hyderabad\",\n  \"category\":\"IT Services\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vendor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApproveVendor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDU3MjQ0OCwiZXhwIjoxNzgwNTczMzQ4fQ.XHgpRMO0hwW9_qzTRDRRcLLRDFgTnVgnWjmYQ1r6CLk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vendor/1/approve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor",
+								"1",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateVendorStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDU3MjQ0OCwiZXhwIjoxNzgwNTczMzQ4fQ.XHgpRMO0hwW9_qzTRDRRcLLRDFgTnVgnWjmYQ1r6CLk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\":\"blacklisted\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vendor/1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dahboard",
+			"item": [
+				{
+					"name": "summary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDg0MDYxOCwiZXhwIjoxNzgwODQxNTE4fQ._xNrgvIzZp77Vqge5YF1toiO2wcKYlYvSHZiLwbwnz4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/dashboard/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"dashboard",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spending",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDc2MTA1NiwiZXhwIjoxNzgwNzYxOTU2fQ.srOrTGwcz1dMjFAgGyJj8CHfnGtFlUcU_ExyOoJb4DM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vendor/spending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor",
+								"spending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alerts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDc2MTA1NiwiZXhwIjoxNzgwNzYxOTU2fQ.srOrTGwcz1dMjFAgGyJj8CHfnGtFlUcU_ExyOoJb4DM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vendor/alerts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor",
+								"alerts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "audit-logs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDc2MTA1NiwiZXhwIjoxNzgwNzYxOTU2fQ.srOrTGwcz1dMjFAgGyJj8CHfnGtFlUcU_ExyOoJb4DM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vendor/audit-logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vendor",
+								"audit-logs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase-Orders",
+			"item": [
+				{
+					"name": "PostOrders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor_id\": 2,\n  \"contract_id\": 1,\n  \"title\": \"Laptop Procurement\",\n  \"quantity\": 10,\n  \"unit_price\": 50000,\n  \"tax_percent\": 18,\n  \"delivery_date\": \"2026-06-30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/purchase-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"purchase-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor_id\": 2,\n  \"contract_id\": 1,\n  \"title\": \"Laptop Procurement\",\n  \"quantity\": 10,\n  \"unit_price\": 50000,\n  \"tax_percent\": 18,\n  \"delivery_date\": \"2026-06-30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/purchase-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"purchase-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderByID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"vendor_id\": 2,\n  \"contract_id\": 1,\n  \"title\": \"Laptop Procurement\",\n  \"quantity\": 10,\n  \"unit_price\": 50000,\n  \"tax_percent\": 18,\n  \"delivery_date\": \"2026-06-30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/purchase-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"purchase-orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "getInvoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgyMTYyMiwiZXhwIjoxNzgwODIyNTIyfQ.7DJPc3UiaRyf1Z4X1S_JSxdufays8PKb45gr3_G4BxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/invoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postInvoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgyMDk0NSwiZXhwIjoxNzgwODIxODQ1fQ.wiExLr5wKEo-cJy6VX81x6-OE13i9PAjpouquxkqmlk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"invoice_number\": \"INV-1001\",\n  \"po_id\": 1,\n  \"vendor_id\": 1,\n  \"amount\": 100000,\n  \"tax_amount\": 18000,\n  \"invoice_date\": \"2026-06-03\",\n  \"due_date\": \"2026-07-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/invoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateInvoice_Aprrove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgyMzY5OSwiZXhwIjoxNzgwODI0NTk5fQ.25S4FWNrslZceYpwqIG8D9eCKveFxs8XEbXE6P5jFYA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/invoices/1/approve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"invoices",
+								"1",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateInvoice_MarkPaid",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/invoices/1/mark-paid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"invoices",
+								"1",
+								"mark-paid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateInvoice_dispute",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/invoices/1/dispute",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"invoices",
+								"1",
+								"dispute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInvoiceByID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/invoices/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"invoices",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Audit_Logs",
+			"item": [
+				{
+					"name": "get_Audit_logs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc4MDgzNzkxNCwiZXhwIjoxNzgwODM4ODE0fQ.QXWlMIKn1QbR0z4_5up6qSmDkYArbnJ6FLGbiM4W0MQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/audit-logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"audit-logs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
